@@ -1,0 +1,1045 @@
+  [1m[36m (0.3ms)[0m  [1mDROP DATABASE IF EXISTS `demo_test`[0m
+  [1m[35m (0.1ms)[0m  CREATE DATABASE `demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (65.0ms)[0m  [1mCREATE TABLE `books` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (51.4ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `description` text, `image_url` varchar(255), `price` decimal(10), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (51.5ms)[0m  [1mCREATE TABLE `subjects` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (48.9ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (136.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (25.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20160224041814')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.0ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `subjects`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `subjects` () VALUES ()[0m
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `subjects`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `subjects` () VALUES ()
+Mysql2::Error: Field 'created_at' doesn't have a default value: INSERT INTO `subjects` () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.0ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 08:56:53', '2016-02-24 08:56:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 08:56:53', '2016-02-24 08:56:53', 298486374)[0m
+  [1m[35m (33.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+  Rendered products/show.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 171ms (Views: 169.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `products`
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `products` WHERE `products`.`id` = 980190962[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35m (40.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE (`products`.`title` = BINARY 'Lorem Ipsum' AND `products`.`id` != 980190962) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `products` SET `title` = 'Lorem Ipsum', `description` = 'Wibbles are fun!', `image_url` = 'lorem.jpg', `price` = 19, `updated_at` = '2016-02-24 08:56:53' WHERE `products`.`id` = 980190962
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+  [1m[35m (22.3ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (9.5ms)
+  Rendered products/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+  Rendered products/_form.html.erb (1.6ms)
+  Rendered products/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `products`
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'Lorem Ipsum' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`) VALUES ('Lorem Ipsum', 'Wibbles are fun!', 'lorem.jpg', 19, '2016-02-24 08:56:53', '2016-02-24 08:56:53')[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products/980190963
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35m (24.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------
+SayControllerTest: test_should_get_goodbye
+------------------------------------------
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+----------------------------------------
+SayControllerTest: test_should_get_hello
+----------------------------------------
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 08:58:25', '2016-02-24 08:58:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 08:58:25', '2016-02-24 08:58:25', 298486374)[0m
+  [1m[35m (24.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+SayControllerTest: test_should_get_goodbye
+------------------------------------------
+Processing by SayController#goodbye as HTML
+  Rendered say/goodbye.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+SayControllerTest: test_should_get_hello
+----------------------------------------
+Processing by SayController#hello as HTML
+  Rendered say/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `products`
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `products` WHERE `products`.`id` = 980190962[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/products
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35m (21.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  Rendered products/_form.html.erb (10.3ms)
+  Rendered products/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[35mProduct Load (0.0ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE (`products`.`title` = BINARY 'Lorem Ipsum' AND `products`.`id` != 980190962) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `products` SET `title` = 'Lorem Ipsum', `description` = 'Wibbles are fun!', `image_url` = 'lorem.jpg', `price` = 19, `updated_at` = '2016-02-24 08:58:26' WHERE `products`.`id` = 980190962
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190962
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+  [1m[35m (25.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"title"=>"Lorem Ipsum", "description"=>"Wibbles are fun!", "image_url"=>"lorem.jpg", "price"=>"19.95"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'Lorem Ipsum' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`) VALUES ('Lorem Ipsum', 'Wibbles are fun!', 'lorem.jpg', 19, '2016-02-24 08:58:26', '2016-02-24 08:58:26')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/products/980190964
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `products`
+  [1m[36m (28.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (1.7ms)
+  Rendered products/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 980190962 LIMIT 1[0m
+  Rendered products/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:21:06', '2016-02-24 09:21:06', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:21:06', '2016-02-24 09:21:06', 298486374)[0m
+  [1m[35m (42.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:50:22', '2016-02-24 09:50:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:50:22', '2016-02-24 09:50:22', 298486374)[0m
+  [1m[35m (27.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:51:21', '2016-02-24 09:51:21', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:51:21', '2016-02-24 09:51:21', 298486374)[0m
+  [1m[35m (27.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+---------------------------
+ProductTest: test_image_url
+---------------------------
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:51:28', '2016-02-24 09:51:28', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:51:28', '2016-02-24 09:51:28', 298486374)[0m
+  [1m[35m (22.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+---------------------------
+ProductTest: test_image_url
+---------------------------
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `products`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:52:30', '2016-02-24 09:52:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `products` (`title`, `description`, `image_url`, `price`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyText', 'MyString', 9, '2016-02-24 09:52:30', '2016-02-24 09:52:30', 298486374)[0m
+  [1m[35m (53.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+ProductTest: test_product_attributes_must_not_be_empty
+------------------------------------------------------
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------
+ProductTest: test_image_url
+---------------------------
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.0ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+------------------------------------------------
+ProductTest: test_product_price_must_be_positive
+------------------------------------------------
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1
+  [1m[36mProduct Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM `products` WHERE `products`.`title` = BINARY 'My Book Title' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK

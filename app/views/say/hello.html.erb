@@ -1,0 +1,10 @@
+<h1>Hello</h1>
+
+<p>Time to say
+  <%=link_to "Goodbye", say_goodbye_path%>
+</p>
+<p>
+  <% for file in @files %>
+  file name is: <%= file %><br>
+  <% end %>
+</p>
